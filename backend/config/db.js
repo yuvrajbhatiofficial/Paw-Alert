@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const connection = mongoose.connect('mongodb://localhost:27017/pet-data').then(()=>{
+const connection = mongoose.connect(process.env.CONNECTION_STRING).then(()=>{
     console.log("connected to databse")
 })
 
