@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin panel</title>
+    <title>Admin Panel</title>
+    <script>
+        // Check if "deleted" query parameter is present in the URL
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('deleted')) {
+                alert("Data deleted successfully!");
+                history.replaceState(null, '', window.location.pathname);
+            }
+        };
+    </script>
 </head>
 <body>
-    <!-- here we make admin panel for authorities  -->
-     <h1>hello world</h1>
+    <h1>Hello World</h1>
 
-     
+    <!-- Display the data using map -->
+    <ul>
+        <% data.forEach(item => { %>
+            <li id="pet-<%= item._id %>">
+                <h3><%= item.petName %></h3> 
+                <form action="/admin/delete-pet-data" method="POST" style="display:inline;">
+                    <input type="hidden" name="petId" value="<%= item._id %>">
+                    <button type="submit">Delete</button>
+                </form>
+               
+            </li>
+        <% }) %>
+    </ul>
 </body>
 </html>

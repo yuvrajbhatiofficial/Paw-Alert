@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const dbConnection = require('./config/db')
@@ -13,10 +14,12 @@ app.use(morgan('dev'))
 
 app.set("view engine" , 'ejs')
 app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use('/admin',adminRouter)
 app.use('/user',userRouter)
 app.use('/uploads', express.static('uploads'));
+
 
 
 app.get('/', (req,res)=>{
