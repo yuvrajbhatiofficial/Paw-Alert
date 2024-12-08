@@ -8,7 +8,7 @@ export default function Index() {
   const handleSubmit =async() =>{
     const petData = { petName: name }; 
 
-    const respose = await fetch("http://localhost:8000/admin/upload-pet-data",{
+    const respose = await fetch("http://localhost:8000/user/upload-pet-data",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",

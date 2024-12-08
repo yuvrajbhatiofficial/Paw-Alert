@@ -3,6 +3,8 @@ const router = express.Router();
 const petModel = require('../models/animal.model')
 
 
+
+
 router.post('/upload-pet-data',async (req,res)=>{
     const {petName}=req.body
     const newProduct = await petModel.create({
@@ -10,11 +12,8 @@ router.post('/upload-pet-data',async (req,res)=>{
        petName:petName
     })
    res.send('pet uploded')
-})
-
-
-
-
+ })
+ 
 
 
 module.exports = router;

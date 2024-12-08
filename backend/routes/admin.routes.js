@@ -11,6 +11,9 @@ router.get('/get-pet-data',async(req,res)=>{
    console.log('data retrived from backend to json')
 })
 
+
+
+
 router.post('/delete-pet-data', async (req, res) => {
    const { petId } = req.body;  // Get petId from the request body
    console.log(petId);  // Log petId to verify it's being sent correctly
