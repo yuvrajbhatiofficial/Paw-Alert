@@ -23,6 +23,17 @@
         <% data.forEach(item => { %>
             <li id="pet-<%= item._id %>">
                 <h3><%= item.petName %></h3> 
+                <p><strong>Description</strong> <%= item.description%></p>
+                <p><strong>googleMapLink</strong> <a href="<%= item.currentLocationUrl %>" target="_blank"><%= item.currentLocationUrl %></a></p>
+                <p><strong>addressLineOne</strong> <%= item.addressLineOne%></p>
+                <p><strong>addressLineSecond</strong> <%= item.addressLineSecond%></p>
+                <p><strong>landmark</strong> <%= item.landmark%></p>
+                <p><strong>zipcode</strong> <%= item.zipcode%></p>
+                <p><strong>city</strong> <%= item.city%></p>
+                <p><strong>state</strong> <%= item.state%></p>
+                <p><strong>contactInfo</strong> <%= item.contactInfo%></p>
+
+
                 <form action="/admin/delete-pet-data" method="POST" style="display:inline;">
                     <input type="hidden" name="petId" value="<%= item._id %>">
                     <button type="submit">Delete</button>

@@ -1,11 +1,18 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const petSchema = new mongoose.Schema({
-    petName:String,
-    
+    petName: String,
+    description: String,
+    currentLocationUrl: String,
+    addressLineOne: String,
+    addressLineSecond: String,
+    landmark: String,
+    zipcode: Number,
+    city: String,
+    state: String,
+    contactInfo: String
+});
 
-})
+const PetModel = mongoose.model('Pet', petSchema);
 
-const petModel = mongoose.model('petName', petSchema);
-
-module.exports = petModel
+module.exports = PetModel;
