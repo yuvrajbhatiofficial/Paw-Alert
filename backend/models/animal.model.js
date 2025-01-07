@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 
 const petSchema = new mongoose.Schema({
     petName: String,
+    img: {
+        data: Buffer,
+        contentType: String,
+    },
+      
     description: String,
     currentLocationUrl: String,
     addressLineOne: String,

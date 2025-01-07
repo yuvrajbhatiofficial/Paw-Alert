@@ -1,10 +1,15 @@
 import React from 'react'
-import Main from './components/Main'
+
+import LandingPage from './components/land'
+
+
+
 
 function App() {
   return (
     <>
-      <Main/>
+      <LandingPage/>
+      
     </>
   )
 }

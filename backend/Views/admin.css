@@ -1,0 +1,101 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #d9534f;
+    margin: 20px 0;
+    font-size: 2.5em;
+}
+
+h3 {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Main container for dashboard */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Styling individual list items */
+li {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+li img {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form and button styling */
+form {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #c9302c;
+}
+
+/* Highlight key details */
+p {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+strong {
+    color: #555;
+}
+
+/* Alert styling */
+.alert {
+    color: #d9534f;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
